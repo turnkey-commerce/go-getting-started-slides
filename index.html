@@ -110,7 +110,32 @@
 		<li>Go Get</li>
 		<li>Vendoring</li>
 		<li>Tools -> GoDeps, Glide</li>
-		<li>Forking/pull requests package handling</li>
+		<li>Forking a Package for Contributions</li>
+		</ol></ol>
+	</section>
+	<section class="slide">
+		<h2>Forking a Package For Contributions - Issue</h2>
+		<ul><ul>
+		<li>Internal package names in import referencing wrong location</li>
+		<li>e.g. Assuming forked to <b>github.com/your-username/xo</b>, the original references will be:</li>
+		<code>
+import (<br />
+&nbsp;&nbsp;"<b>github.com/knq/xo</b>/internal"
+&nbsp;&nbsp;"<b>github.com/knq/xo</b>/models"<br />
+)
+		</code>
+		<li>Renaming all of them to <b>github.com/your-username/xo</b> is not practical and error prone</li>
+		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2>Forking a Package For Contributions - Technique</h2>
+		<ol><ol>
+		<li>Go get the package as normal</li>
+		<li>Fork package as usual on Github</li>
+		<li>At "go get" code location set fork as remote</li>
+		<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
+		<li>Push commits back to fork</li>
+		<li>Issue pull request from fork</li>
 		</ol></ol>
 	</section>
 	<section class="slide">
