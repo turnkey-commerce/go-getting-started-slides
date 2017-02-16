@@ -19,6 +19,9 @@
 	ul {
 		list-style: outside bullet;
 	}
+	h3 {
+		color: darkslateblue; font-size: larger; font-weight: bold
+	}
 </style>
 </head>
 <body class="shower list">
@@ -112,6 +115,55 @@
 		<li>Tools -> GoDeps, Glide</li>
 		<li>Forking a Package for Contributions</li>
 		</ol></ol>
+	</section>
+	<section class="slide">
+		<h2>Go Get</h2>
+		<ul><ul>
+		<li>Tool for installing/updating packages to Go path</li>
+		<li>Example:</li>
+		<code>
+go get github.com/knq/xo
+		</code>
+		<li>Pulls the code to $GOPATH/src/github.com/knq/xo and builds the package</li>
+		<li>Doesn't provide any means to track or pin versions</li>
+		</ul></ul>
+	</section>
+    <section class="slide">
+		<h2>Vendoring</h2>
+		<ul><ul>
+		<li>Vendoring is the placement of packages in a <b>vendor</b> directory</li> within the $GOPATH
+		<li>Vendored packages have precedence over packages obtained via go&nbsp;get</li>
+		<li>Allows for reproducible builds and control over package versions</li>
+		<li>Tools are available to help with vendoring</li>
+		<li>"Official" tool <b>dep</b> is in development: github.com/golang/dep</li>
+		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2>Vendoring Tools To Use Now</h2>
+		<ul><ul>
+		<li>Popular vendoring tools (until <b>dep</b> is officially released):</li>
+		<ul>
+		<li><b>Glide</b> (github.com/Masterminds/glide)</li>
+		<li><b>Godep</b> (github.com/tools/godep)</li>
+		<li><b>Govendor</b> (github.com/kardianos/govendor)</li>
+		</ul>
+		</ul></ul>
+	</section>
+		<section class="slide">
+		<h2>Vendoring Guidelines</h2>
+		<ul><ul>
+		<h3>Library Development</h3>
+		<ul>
+			<li>Avoid unnecessary external dependencies</li>
+			<li>Take care with vendoring</li>
+			<li>Some advise to avoid vendoring within libraries</li>
+		</ul>
+		<h3>Application Development</h3>
+		<ul>
+			<li>Vendor all external dependencies</li>
+			<li>Commit vendored folder to source control (reproducible builds)</li>
+		</ul>
+		</ul></ul>
 	</section>
 	<section class="slide">
 		<h2>Forking a Package For Contributions - Issue</h2>
