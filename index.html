@@ -52,9 +52,10 @@
 			<li>Garbage Collected</li>
 			<li>Built for Scale</li>
 			<li>Single Executable</li>
-			<li>Cross Platform</li>
+			<li>Cross Platform (targets many)</li>
 			<li>Compiles fast</li>
 			<li>Simple to Read/Maintain</li>
+			<li>Strong Concurrency Support</li>
 		</ul>
 	</section>
 	<section class="slide">
@@ -125,6 +126,7 @@
 go get github.com/knq/xo
 		</code>
 		<li>Pulls the code to $GOPATH/src/github.com/knq/xo and builds the package</li>
+		<li>Also pulls and builds dependent packages</li>
 		<li>Doesn't provide any means to track or pin versions</li>
 		</ul></ul>
 	</section>
@@ -146,6 +148,7 @@ go get github.com/knq/xo
 		<li><b>Glide</b> (github.com/Masterminds/glide)</li>
 		<li><b>Godep</b> (github.com/tools/godep)</li>
 		<li><b>Govendor</b> (github.com/kardianos/govendor)</li>
+		<li>Others...</li>
 		</ul>
 		</ul></ul>
 	</section>
@@ -156,7 +159,7 @@ go get github.com/knq/xo
 		<ul>
 			<li>Avoid unnecessary external dependencies</li>
 			<li>Take care with vendoring</li>
-			<li>Some advise to avoid vendoring within libraries</li>
+			<li>Some developers advise to avoid vendoring within libraries</li>
 		</ul>
 		<h3>Application Development</h3>
 		<ul>
@@ -194,11 +197,48 @@ import (<br />
 		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
-		<h2>IDE/Debugging</h2>
-		<ol><ol>
-		<li>Options</li>
-		<li>Code Formatting</li>
-		</ol></ol>
+		<h2>Editors</h2>
+		<ul><ul>
+			<li>Vim with vim-go plugin</li>
+			<li>Emacs with go-mode plugin</li>
+			<li>Sublime with go-sublime plugin</li>
+			<li>Atom with go-plus plugin</li>
+			<li>VS Code with lukehoban.go plugin</li>
+		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2>IDE's</h2>
+		<ul><ul>
+			<li>LiteIDE (github.com/visualfc/liteide)</li>
+			<li>Gogland - JetBrains IDE (in beta)</li>
+			<li>Eclipse with goclipse plugin</li> 
+		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2>Recommendation</h2>
+		<h3>VS Code</h3>
+		<ul><ul>
+			<li>Free and Open Source</li>
+			<li>Multi-platform</li>
+			<li>Performant Compared to Atom</li>
+			<li>Frequent Upgrades</li>
+			<li>Good integration with Delve Debugger</li>
+			<li>Highly configurable with Go tools</li>
+			<li>Nice integration with Git/Github</li>
+		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2>Debugging Practices</h2>
+		<ul><ul>
+			<li>Printing state</li>
+			<ul>
+				<li>log.Printf</li>
+				<li>fmt.Printf</li>
+			</ul>
+			<li>go run -race (to detect race conditions)</li>
+			<li>ctrl+Backslash (Linux command line to dump state)</li>
+			<li>Interactive debugging with breakpoints (Delve)</li>
+		</ul></ul>
 	</section>
 	</section>
 		<section class="slide">
@@ -207,9 +247,10 @@ import (<br />
 	<section class="slide">
 		<h2>Essential Resources</h2>
 		<ol><ol>
-		<li>How to Write Go Code (https://golang.org/doc/code.html)</li>
-		<li>Awesome Go (https://github.com/avelino/awesome-go)</li>
-		<li>"The Go Programming Language" - Donavan and Kernighan</li>
+		<li>How to Write Go Code (golang.org/doc/code.html)</li>
+		<li>Awesome Go (github.com/avelino/awesome-go)</li>
+		<li>"The Go Programming Language" - Book by Donavan and Kernighan</li>
+		<li>Go By Example (gobyexample.com)</li>
 		</ol></ol>
 	</section>
 	</section>
@@ -218,6 +259,10 @@ import (<br />
 		<ol><ol>
 		<li>Exercism Exercises (http://exercism.io/languages/go/exercises)</li>
 		<li>Contributing to Go open source software</li>
+			<ul>
+				<li>Write your own Go programs</li>
+				<li>Contribute to existing Go Programs</li>
+			</ul>
 		</ol></ol>
 	</section>
 	</section>
