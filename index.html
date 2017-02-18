@@ -13,8 +13,16 @@
     -moz-columns: 2;
 	}
 
+	code {
+		font-size: 14pt;
+	}
+
+	h3 {
+		margin: 10px; line-height: 20px;
+	}
+
 	ul li {
-		margin-left: 1em;
+		margin-left: 1em; line-height: 40px;
 	}
 	ul {
 		list-style: outside bullet;
@@ -29,9 +37,46 @@
 		<h1>Getting Started With Go</h1>
 		<p>Michael Kacher and James Culbertson, Houston Golang Meetup, February 23, 2017</p>
 	</header>
+	<section class="slide black" id="cover">
+		<header>
+			<h2>Getting Started With Go</h2>
+			<ul><ul>
+			<p>James Culbertson</p>
+			<p>Michael Kacher</p>
+			</ul></ul>
+			<h3>
+				Houston Golang Meetup<br>
+				February 23, 2017
+			</h3>
+		</header>
+		<img style="margin-left: 300px;" class="cover" src="pictures/gopher_graduate.png" alt="">
+		<style>
+		    #cover p {
+				color: #FFF;
+				font-size: 30px;
+				line-height: 20px;
+			}
+			#cover h2 {
+				background: rgba(0, 0, 0, 0.2);
+				color: #FFF;
+				line-height: 54px;
+				font-size: 60px;
+				}	
+			#cover h3 {
+				position: absolute;
+				top: 350px;
+				left: 0;
+				padding: 9px 0 0 104px;
+				background: rgba(0, 0, 0, 0.2);
+				color: #FFF;
+				line-height: 54px;
+				font-size: 40px;
+				}
+		</style>
+	</section>
 	<section class="slide">
 		<h2>Getting Started With Go</h2>
-		<ol>
+		<ol><ol>
 			<li>Why and When to Go?</li>
 			<li class="next">Setup and Build</li>
 			<li class="next">Tour of Go</li>
@@ -40,23 +85,43 @@
 			<li class="next">Essential Resources</li>
 			<li class="next">Further Practices</li>
 			<li class="next">Q and A</li>
-		</ol>
+		</ol></ol>
 	</section>
 	<section class="slide" id="two-column">
 		<h2>Why and When to Go?</h2>
+		<h3>Features</h3>
 		<ul>
 			<li>Open Source</li>
 			<li>Imperative</li>
 			<li>Statically Typed</li>
-			<li>Native</li>
+			<li>Strong Standard Library</li>
 			<li>Garbage Collected</li>
 			<li>Built for Scale</li>
 			<li>Single Executable</li>
 			<li>Cross Platform (targets many)</li>
-			<li>Compiles fast</li>
+			<li>Compiles quickly</li>
 			<li>Simple to Read/Maintain</li>
 			<li>Strong Concurrency Support</li>
+			<li>Fast to Learn</li>
+			<li>Built-in testing and profiling</li>
+			<li>Low use of compute resources</li>
 		</ul>
+	</section>
+	<section class="slide">
+		<h2>Why and When to Go?</h2>
+		<h3>Application Domains</h2>
+		<ul><ul>
+			<li>High scale server applications</li>
+			<li>Command line applications</li>
+			<li>Web API and web applications</li>
+			<li>Concurrent applications</li>
+			<li>Devops (easy deployment and native orchestration tools)</li>
+		</ul></ul>
+		<h3>Less Optimum Domains</h3>
+		<ul><ul>
+		<li>Native UI Applications</li>
+		<li>Native Mobil Applications</li>
+		</ul></ul>
 	</section>
 	<section class="slide">
 		<h2>Setup and Build</h2>
@@ -97,7 +162,7 @@
 	</section>
 	<section class="slide">
 		<h2>Tour of Go - <a href ="https://tour.golang.org">https://tour.golang.org</a></h2> 
-		<b>Highlights</b>
+		<h3>Highlights</h3>
 		<ul><ul>
 			<li>Types</li>
 			<li>Functions</li>
@@ -107,6 +172,9 @@
 			<li>Error handling</li>
 			<li>Interfaces</li>
 		</ul></ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
 		<h2>Package Management</h2>
@@ -133,7 +201,7 @@ go get github.com/knq/xo
     <section class="slide">
 		<h2>Vendoring</h2>
 		<ul><ul>
-		<li>Vendoring is the placement of packages in a <b>vendor</b> directory</li> within the $GOPATH
+		<li>Vendoring is the placement of packages in a <b>vendor</b> directory within the $GOPATH</li>
 		<li>Vendored packages have precedence over packages obtained via go&nbsp;get</li>
 		<li>Allows for reproducible builds and control over package versions</li>
 		<li>Tools are available to help with vendoring</li>
@@ -155,27 +223,27 @@ go get github.com/knq/xo
 		<section class="slide">
 		<h2>Vendoring Guidelines</h2>
 		<ul><ul>
-		<h3>Library Development</h3>
-		<ul>
-			<li>Avoid unnecessary external dependencies</li>
-			<li>Take care with vendoring</li>
-			<li>Some developers advise to avoid vendoring within libraries</li>
-		</ul>
-		<h3>Application Development</h3>
-		<ul>
-			<li>Vendor all external dependencies</li>
-			<li>Commit vendored folder to source control (reproducible builds)</li>
-		</ul>
+			<h3>Library Development</h3>
+			<ul>
+				<li>Avoid unnecessary external dependencies</li>
+				<li>Take care with vendoring</li>
+				<li>Some developers advise to avoid vendoring within libraries</li>
+			</ul>
+			<h3>Application Development</h3>
+			<ul>
+				<li>Vendor all external dependencies</li>
+				<li>Commit vendored folder to source control (reproducible builds)</li>
+			</ul>
 		</ul></ul>
 	</section>
 	<section class="slide">
-		<h2>Forking a Package For Contributions - Issue</h2>
+		<h2>Forking a Package For Contributions</h2>
 		<ul><ul>
-		<li>Internal package names in import referencing wrong location</li>
-		<li>e.g. Assuming forked to <b>github.com/your-username/xo</b>, the original references will be:</li>
+			<li>Internal package names in import referencing wrong location</li>
+			<li>If you forked<b>github.com/your-username/xo</b>, the original references will be:</li>
 		<code>
 import (<br />
-&nbsp;&nbsp;"<b>github.com/knq/xo</b>/internal"
+&nbsp;&nbsp;"<b>github.com/knq/xo</b>/internal"<br />
 &nbsp;&nbsp;"<b>github.com/knq/xo</b>/models"<br />
 )
 		</code>
@@ -183,14 +251,15 @@ import (<br />
 		</ul></ul>
 	</section>
 	<section class="slide">
-		<h2>Forking a Package For Contributions - Technique</h2>
+		<h2>Forking a Package For Contributions</h2>
+		<h3>Technique</h3>		
 		<ol><ol>
-		<li>Go get the package as normal</li>
-		<li>Fork package as usual on Github</li>
-		<li>At "go get" code location set fork as remote</li>
-		<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
-		<li>Push commits back to fork</li>
-		<li>Issue pull request from fork</li>
+			<li>Go get the package as normal</li>
+			<li>Fork package as usual on Github</li>
+			<li>At "go get" code location set fork as remote</li>
+			<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
+			<li>Push commits back to fork</li>
+			<li>Issue pull request from fork</li>
 		</ol></ol>
 	</section>
 	<section class="slide">
@@ -246,24 +315,29 @@ import (<br />
 	</section>
 	<section class="slide">
 		<h2>Essential Resources</h2>
-		<ol><ol>
+		<ul><ul>
 		<li>How to Write Go Code (golang.org/doc/code.html)</li>
 		<li>Awesome Go (github.com/avelino/awesome-go)</li>
 		<li>"The Go Programming Language" - Book by Donavan and Kernighan</li>
 		<li>Go By Example (gobyexample.com)</li>
-		</ol></ol>
+		</ul></ul>
 	</section>
 	</section>
 		<section class="slide">
 		<h2>Further Practice</h2>
-		<ol><ol>
+		<ul><ul>
 		<li>Exercism Exercises (http://exercism.io/languages/go/exercises)</li>
-		<li>Contributing to Go open source software</li>
+		<li>Contribute to Go open source software</li>
 			<ul>
-				<li>Write your own Go programs</li>
-				<li>Contribute to existing Go Programs</li>
+				<li>Write your own Go open source apps/libraries</li>
+				<li>Contribute to existing Go open source</li>
 			</ul>
-		</ol></ol>
+		<li>Read examples of Go code</li>
+			<ul>
+				<li>Standard Library (golang.org/src/net)</li>
+				<li>Open Source (github.com/gorilla/mux)</li>
+			</ul>
+		</ul></ul>
 	</section>
 	</section>
 		<section class="slide">
