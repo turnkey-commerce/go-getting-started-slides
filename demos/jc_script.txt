@@ -1,0 +1,40 @@
+Prep
+=====
+
+1) Change GOPATH to Documents\go2
+2) Change PATH to include Documents\go2\bin (before the default go\bin)
+2) Clear Documents\go2.
+
+Go get and Vendoring demo
+=========================
+1) Get Gorilla mux:
+   go get -u github.com/gorilla/mux
+2) Go to Gorilla mux path and show how it is a local repository pointing back to origin/master.
+   cd %GOPATH%\src\github.com\gorilla\mux
+   git remote -v 
+3) Create path for an app that includes mux.
+   mkdir %GOPATH%\src\gorillaweb
+   cd %GOPATH%\src\gorillaweb
+4) Copy app code.
+   cp go-getting-started-slides/demos/gorillaweb.go .
+   go build
+5) Run demo and navigate to localhost:8000
+   gorillaweb
+
+Vendoring demo
+==============
+1) Get godep
+   go get github.com/tools/godep
+2) Show where it is being installed in the tools.
+3) Run the godep save command:
+   cd %GOPATH%\src\gorillaweb
+   godep save
+4) Show the contents of the Godeps folder and the vendor folder.
+5) Remove the gorilla mux from the src\github.com\gorilla path.
+   cd %GOPATH%\src\github.com
+   rm -rf gorilla
+6) Add another route for goodnight to the Gorilla (as in gorilla2.go)
+6) Rebuild the app, start again, and browse to the new route.
+
+
+
