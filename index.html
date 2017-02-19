@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Getting Started With Go</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
-<style>
-	#two-column ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-	}
-
-	code {
-		font-size: 14pt;
-	}
-
-	h3 {
-		margin: 10px; line-height: 20px;
-	}
-
-	ul li {
-		margin-left: 1em; line-height: 40px;
-	}
-	ul {
-		list-style: outside bullet;
-	}
-	h3 {
-		color: darkslateblue; font-size: larger; font-weight: bold
-	}
-</style>
+	<style>
+		#two-column ul {
+			columns: 2;
+			-webkit-columns: 2;
+			-moz-columns: 2;
+		}
+		
+		code {
+			font-size: 14pt;
+		}
+		
+		h3 {
+			margin: 10px;
+			line-height: 20px;
+		}
+		
+		ul li {
+			margin-left: 1em;
+			line-height: 40px;
+		}
+		
+		ul {
+			list-style: outside bullet;
+		}
+		
+		h3 {
+			color: darkslateblue;
+			font-size: larger;
+			font-weight: bold
+		}
+	</style>
 </head>
+
 <body class="shower list">
 	<header class="caption">
 		<h1>Getting Started With Go</h1>
@@ -40,28 +48,33 @@
 	<section class="slide black" id="cover">
 		<header>
 			<h2>Getting Started With Go</h2>
-			<ul><ul>
-			<p>James Culbertson</p>
-			<p>Michael Kacher</p>
-			</ul></ul>
+			<ul>
+				<ul>
+					<p>James Culbertson</p>
+					<p>Michael Kacher</p>
+				</ul>
+			</ul>
 			<h3>
-				Houston Golang Meetup<br>
-				February 23, 2017
+				Houston Golang Meetup<br> February 23, 2017 
 			</h3>
+			
 		</header>
 		<img style="margin-left: 300px;" class="cover" src="pictures/gopher_graduate.png" alt="">
+		
 		<style>
-		    #cover p {
+			#cover p {
 				color: #FFF;
 				font-size: 30px;
 				line-height: 20px;
 			}
+			
 			#cover h2 {
 				background: rgba(0, 0, 0, 0.2);
 				color: #FFF;
 				line-height: 54px;
 				font-size: 60px;
-				}	
+			}
+			
 			#cover h3 {
 				position: absolute;
 				top: 350px;
@@ -71,34 +84,121 @@
 				color: #FFF;
 				line-height: 54px;
 				font-size: 40px;
-				}
+			}
 		</style>
 	</section>
 	<section class="slide">
 		<h2>Getting Started With Go</h2>
-		<ol><ol>
-			<li>Why and When to Go?</li>
-			<li class="next">Setup and Build</li>
-			<li class="next">Tour of Go</li>
-			<li class="next">Package Management</li>
-			<li class="next">IDE and Debugging</li>
-			<li class="next">Essential Resources</li>
-			<li class="next">Further Practices</li>
-			<li class="next">Q and A</li>
-		</ol></ol>
+		<ol>
+			<ol>
+				<li>Why and When to Go?</li>
+				<li class="next">What is Go</li>
+				<li class="next">Setup and Build</li>
+				<li class="next">Tour of Go</li>
+				<li class="next">Package Management</li>
+				<li class="next">IDE and Debugging</li>
+				<li class="next">Essential Resources</li>
+				<li class="next">Further Practices</li>
+				<li class="next">Q and A</li>
+			</ol>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A programming language</h3>
+		<figure>
+			<blockquote>
+				<p>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+			</blockquote>
+			<figcaption><a href="https://github.com/golang/go">github.com/golang/go</a></figcaption>
+			<blockquote>
+				<p>It's fair to say that Go was designed for the cloud before clouds ran software.</p>
+			</blockquote>
+			<figcaption>
+				Russ Cox
+			</figcaption>
+		</figure>
 	</section>
 	<section class="slide" id="two-column">
-		<h2>Why and When to Go?</h2>
+		<h2>What is Go?</h2>
+		<h3>Go personality</h3>
+		<img style="margin-left: 280px;" class="cover" src="pictures/HoustonGopher.jpeg" alt="">
+		<p style="width: 400px">Go mascot and  community member representation (A "Gopher").</p>
+		<p></p>
+		<p style="width: 400px">Gopher image by Renee French, licensed under Creative Commons 3.0 Attributions license.</p>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A programming philosophy</h3>
+		<img style="max-width: 90%" src="pictures/goTweet.png" alt="">
+		<p>A language in a tweet! <a href="https://golang.org/ref/spec">Read the spec, it's short!</a></p>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A programming philosophy</h3>
+		<figure>
+			<blockquote>
+				<p>In Go, we have explicitly tried not to solve everything. No idea went into Go until it had been simplified to its essence and then had clear benefits that justified the complexity being added.</p>
+			</blockquote>
+			<figcaption>
+				<a href="https://www.youtube.com/watch?v=XvZOdpd_9tc">Russ Cox YouTube Presentation</a>
+			</figcaption>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A programming philosophy</h3>
+		<ul>
+			<li>Design the architecture, name the components, document the details.</li>
+			<li>Documentation is for users.</li>
+			<li>Clear is better than clever.</li>
+			<li>Reflection is never clear.</li>
+			<li>A little copying is better than a little dependency.</li>
+			<li>The bigger the interface, the weaker the abstraction.</li>
+		</ul>
+		<p> <a href="https://go-proverbs.github.io/">More proverbs from Rob Pike</a></p>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A programming philosophy</h3>
+		<figure>
+			<blockquote>
+				<p>If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition.</p>
+			</blockquote>
+			<figcaption>
+				<a href="https://commandcenter.blogspot.com.au/2012/06/less-is-exponentially-more.html">Rob Pike's Blog</a>
+			</figcaption>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A community</h3>
+		<img class="cover" src="pictures/gophers5th.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>What is Go?</h2>
+		<h3>A community - expected values</h3>
+		<ul>
+			<li>Be friendly and welcoming</li>
+			<li>Be patient</li>
+			<li>Be thoughtful</li>
+			<li>Be respectful</li>
+			<li>Be charitable</li>
+			<li>Avoid destructive behavior</li>
+		</ul>
+		<a href="https://golang.org/conduct">Code of Conduct<a>
+	</section>
+	<section class="slide" id="two-column">
+		<h2>What is Go?</h2>
 		<h3>Features</h3>
 		<ul>
-			<li>Open Source</li>
 			<li>Imperative</li>
 			<li>Statically Typed</li>
 			<li>Strong Standard Library</li>
 			<li>Garbage Collected</li>
 			<li>Built for Scale</li>
 			<li>Single Executable</li>
-			<li>Cross Platform (targets many)</li>
+			<li>Cross Platform</li>
 			<li>Compiles quickly</li>
 			<li>Simple to Read/Maintain</li>
 			<li>Strong Concurrency Support</li>
@@ -110,18 +210,22 @@
 	<section class="slide">
 		<h2>Why and When to Go?</h2>
 		<h3>Application Domains</h2>
-		<ul><ul>
-			<li>High scale server applications</li>
-			<li>Command line applications</li>
-			<li>Web API and web applications</li>
-			<li>Concurrent applications</li>
-			<li>Devops (easy deployment and native orchestration tools)</li>
-		</ul></ul>
-		<h3>Less Optimum Domains</h3>
-		<ul><ul>
-		<li>Native UI Applications</li>
-		<li>Native Mobil Applications</li>
-		</ul></ul>
+			<ul>
+				<ul>
+					<li>High scale server applications</li>
+					<li>Command line applications</li>
+					<li>Web API and web applications</li>
+					<li>Concurrent applications</li>
+					<li>Devops (easy deployment and native orchestration tools)</li>
+				</ul>
+			</ul>
+			<h3>Less Optimum Domains</h3>
+			<ul>
+				<ul>
+					<li>Native UI Applications</li>
+					<li>Native Mobil Applications</li>
+				</ul>
+			</ul>
 	</section>
 	<section class="slide">
 		<h2>Setup and Build</h2>
@@ -135,212 +239,240 @@
 		<h2>Setup and Build</h2>
 		<ul>
 			<li>Go command options</li>
-				<ul>
-					<li>oracle</li>
-					<li>trace</li>
-					<li>test</li>
-					<li>cover</li>
-					<li>race</li>
-					<li>oracle</li>
-				</ul>
+			<ul>
+				<li>oracle</li>
+				<li>trace</li>
+				<li>test</li>
+				<li>cover</li>
+				<li>race</li>
+				<li>oracle</li>
+			</ul>
 		</ul>
 	</section>
 	<section class="slide">
 		<h2>Setup and Build</h2>
 		<ul>
 			<li> Other Commands</li>
-				<ul>
-					<li>godoc</li>
-					<li>gofmt</li>
-					<li>goimports</li>
-					<li>vet</li>
-				</ul>
+			<ul>
+				<li>godoc</li>
+				<li>gofmt</li>
+				<li>goimports</li>
+				<li>vet</li>
+			</ul>
 		</ul>
 	</section>
 	<section class="slide">
 		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
-		<h2>Tour of Go - <a href ="https://tour.golang.org">https://tour.golang.org</a></h2> 
+		<h2>Tour of Go - <a href="https://tour.golang.org">https://tour.golang.org</a></h2>
 		<h3>Highlights</h3>
-		<ul><ul>
-			<li>Types</li>
-			<li>Functions</li>
-			<li>Method receivers, composite literals</li>
-			<li>Embedding</li>
-			<li>Multiple return types</li>
-			<li>Error handling</li>
-			<li>Interfaces</li>
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>Types</li>
+				<li>Functions</li>
+				<li>Method receivers, composite literals</li>
+				<li>Embedding</li>
+				<li>Multiple return types</li>
+				<li>Error handling</li>
+				<li>Interfaces</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
 		<h2>Package Management</h2>
-		<ol><ol>
-		<li>Go Get</li>
-		<li>Vendoring</li>
-		<li>Tools -> GoDeps, Glide</li>
-		<li>Forking a Package for Contributions</li>
-		</ol></ol>
+		<ol>
+			<ol>
+				<li>Go Get</li>
+				<li>Vendoring</li>
+				<li>Tools -> GoDeps, Glide</li>
+				<li>Forking a Package for Contributions</li>
+			</ol>
+		</ol>
 	</section>
 	<section class="slide">
 		<h2>Go Get</h2>
-		<ul><ul>
-		<li>Tool for installing/updating packages to Go path</li>
-		<li>Example:</li>
-		<code>
+		<ul>
+			<ul>
+				<li>Tool for installing/updating packages to Go path</li>
+				<li>Example:</li>
+				<code>
 go get github.com/knq/xo
 		</code>
-		<li>Pulls the code to $GOPATH/src/github.com/knq/xo and builds the package</li>
-		<li>Also pulls and builds dependent packages</li>
-		<li>Doesn't provide any means to track or pin versions</li>
-		</ul></ul>
+				<li>Pulls the code to $GOPATH/src/github.com/knq/xo and builds the package</li>
+				<li>Also pulls and builds dependent packages</li>
+				<li>Doesn't provide any means to track or pin versions</li>
+			</ul>
+		</ul>
 	</section>
-    <section class="slide">
+	<section class="slide">
 		<h2>Vendoring</h2>
-		<ul><ul>
-		<li>Vendoring is the placement of packages in a <b>vendor</b> directory within the $GOPATH</li>
-		<li>Vendored packages have precedence over packages obtained via go&nbsp;get</li>
-		<li>Allows for reproducible builds and control over package versions</li>
-		<li>Tools are available to help with vendoring</li>
-		<li>"Official" tool <b>dep</b> is in development: github.com/golang/dep</li>
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>Vendoring is the placement of packages in a <b>vendor</b> directory within the $GOPATH</li>
+				<li>Vendored packages have precedence over packages obtained via go&nbsp;get</li>
+				<li>Allows for reproducible builds and control over package versions</li>
+				<li>Tools are available to help with vendoring</li>
+				<li>"Official" tool <b>dep</b> is in development: github.com/golang/dep</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Vendoring Tools To Use Now</h2>
-		<ul><ul>
-		<li>Popular vendoring tools (until <b>dep</b> is officially released):</li>
 		<ul>
-		<li><b>Glide</b> (github.com/Masterminds/glide)</li>
-		<li><b>Godep</b> (github.com/tools/godep)</li>
-		<li><b>Govendor</b> (github.com/kardianos/govendor)</li>
-		<li>Others...</li>
+			<ul>
+				<li>Popular vendoring tools (until <b>dep</b> is officially released):</li>
+				<ul>
+					<li><b>Glide</b> (github.com/Masterminds/glide)</li>
+					<li><b>Godep</b> (github.com/tools/godep)</li>
+					<li><b>Govendor</b> (github.com/kardianos/govendor)</li>
+					<li>Others...</li>
+				</ul>
+			</ul>
 		</ul>
-		</ul></ul>
 	</section>
-		<section class="slide">
+	<section class="slide">
 		<h2>Vendoring Guidelines</h2>
-		<ul><ul>
-			<h3>Library Development</h3>
+		<ul>
 			<ul>
-				<li>Avoid unnecessary external dependencies</li>
-				<li>Take care with vendoring</li>
-				<li>Some developers advise to avoid vendoring within libraries</li>
+				<h3>Library Development</h3>
+				<ul>
+					<li>Avoid unnecessary external dependencies</li>
+					<li>Take care with vendoring</li>
+					<li>Some developers advise to avoid vendoring within libraries</li>
+				</ul>
+				<h3>Application Development</h3>
+				<ul>
+					<li>Vendor all external dependencies</li>
+					<li>Commit vendored folder to source control (reproducible builds)</li>
+				</ul>
 			</ul>
-			<h3>Application Development</h3>
-			<ul>
-				<li>Vendor all external dependencies</li>
-				<li>Commit vendored folder to source control (reproducible builds)</li>
-			</ul>
-		</ul></ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Forking a Package For Contributions</h2>
-		<ul><ul>
-			<li>Internal package names in import referencing wrong location</li>
-			<li>If you forked<b>github.com/your-username/xo</b>, the original references will be:</li>
-		<code>
+		<ul>
+			<ul>
+				<li>Internal package names in import referencing wrong location</li>
+				<li>If you forked<b>github.com/your-username/xo</b>, the original references will be:</li>
+				<code>
 import (<br />
 &nbsp;&nbsp;"<b>github.com/knq/xo</b>/internal"<br />
 &nbsp;&nbsp;"<b>github.com/knq/xo</b>/models"<br />
 )
 		</code>
-		<li>Renaming all of them to <b>github.com/your-username/xo</b> is not practical and error prone</li>
-		</ul></ul>
+				<li>Renaming all of them to <b>github.com/your-username/xo</b> is not practical and error prone</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Forking a Package For Contributions</h2>
-		<h3>Technique</h3>		
-		<ol><ol>
-			<li>Go get the package as normal</li>
-			<li>Fork package as usual on Github</li>
-			<li>At "go get" code location set fork as remote</li>
-			<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
-			<li>Push commits back to fork</li>
-			<li>Issue pull request from fork</li>
-		</ol></ol>
+		<h3>Technique</h3>
+		<ol>
+			<ol>
+				<li>Go get the package as normal</li>
+				<li>Fork package as usual on Github</li>
+				<li>At "go get" code location set fork as remote</li>
+				<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
+				<li>Push commits back to fork</li>
+				<li>Issue pull request from fork</li>
+			</ol>
+		</ol>
 	</section>
 	<section class="slide">
 		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
 		<h2>Editors</h2>
-		<ul><ul>
-			<li>Vim with vim-go plugin</li>
-			<li>Emacs with go-mode plugin</li>
-			<li>Sublime with go-sublime plugin</li>
-			<li>Atom with go-plus plugin</li>
-			<li>VS Code with lukehoban.go plugin</li>
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>Vim with vim-go plugin</li>
+				<li>Emacs with go-mode plugin</li>
+				<li>Sublime with go-sublime plugin</li>
+				<li>Atom with go-plus plugin</li>
+				<li>VS Code with lukehoban.go plugin</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>IDE's</h2>
-		<ul><ul>
-			<li>LiteIDE (github.com/visualfc/liteide)</li>
-			<li>Gogland - JetBrains IDE (in beta)</li>
-			<li>Eclipse with goclipse plugin</li> 
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>LiteIDE (github.com/visualfc/liteide)</li>
+				<li>Gogland - JetBrains IDE (in beta)</li>
+				<li>Eclipse with goclipse plugin</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Recommendation</h2>
 		<h3>VS Code</h3>
-		<ul><ul>
-			<li>Free and Open Source</li>
-			<li>Multi-platform</li>
-			<li>Performant Compared to Atom</li>
-			<li>Frequent Upgrades</li>
-			<li>Good integration with Delve Debugger</li>
-			<li>Highly configurable with Go tools</li>
-			<li>Nice integration with Git/Github</li>
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>Free and Open Source</li>
+				<li>Multi-platform</li>
+				<li>Performant Compared to Atom</li>
+				<li>Frequent Upgrades</li>
+				<li>Good integration with Delve Debugger</li>
+				<li>Highly configurable with Go tools</li>
+				<li>Nice integration with Git/Github</li>
+			</ul>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Debugging Practices</h2>
-		<ul><ul>
-			<li>Printing state</li>
+		<ul>
 			<ul>
-				<li>log.Printf</li>
-				<li>fmt.Printf</li>
+				<li>Printing state</li>
+				<ul>
+					<li>log.Printf</li>
+					<li>fmt.Printf</li>
+				</ul>
+				<li>go run -race (to detect race conditions)</li>
+				<li>ctrl+Backslash (Linux command line to dump state)</li>
+				<li>Interactive debugging with breakpoints (Delve)</li>
 			</ul>
-			<li>go run -race (to detect race conditions)</li>
-			<li>ctrl+Backslash (Linux command line to dump state)</li>
-			<li>Interactive debugging with breakpoints (Delve)</li>
-		</ul></ul>
+		</ul>
 	</section>
 	</section>
-		<section class="slide">
+	<section class="slide">
 		<h2 class="shout">Demo</h2>
 	</section>
 	<section class="slide">
 		<h2>Essential Resources</h2>
-		<ul><ul>
-		<li>How to Write Go Code (golang.org/doc/code.html)</li>
-		<li>Awesome Go (github.com/avelino/awesome-go)</li>
-		<li>"The Go Programming Language" - Book by Donavan and Kernighan</li>
-		<li>Go By Example (gobyexample.com)</li>
-		</ul></ul>
+		<ul>
+			<ul>
+				<li>How to Write Go Code (golang.org/doc/code.html)</li>
+				<li>Awesome Go (github.com/avelino/awesome-go)</li>
+				<li>"The Go Programming Language" - Book by Donavan and Kernighan</li>
+				<li>Go By Example (gobyexample.com)</li>
+			</ul>
+		</ul>
 	</section>
 	</section>
-		<section class="slide">
+	<section class="slide">
 		<h2>Further Practice</h2>
-		<ul><ul>
-		<li>Exercism Exercises (http://exercism.io/languages/go/exercises)</li>
-		<li>Contribute to Go open source software</li>
+		<ul>
 			<ul>
-				<li>Write your own Go open source apps/libraries</li>
-				<li>Contribute to existing Go open source</li>
+				<li>Exercism Exercises (http://exercism.io/languages/go/exercises)</li>
+				<li>Contribute to Go open source software</li>
+				<ul>
+					<li>Write your own Go open source apps/libraries</li>
+					<li>Contribute to existing Go open source</li>
+				</ul>
+				<li>Read examples of Go code</li>
+				<ul>
+					<li>Standard Library (golang.org/src/net)</li>
+					<li>Open Source (github.com/gorilla/mux)</li>
+				</ul>
 			</ul>
-		<li>Read examples of Go code</li>
-			<ul>
-				<li>Standard Library (golang.org/src/net)</li>
-				<li>Open Source (github.com/gorilla/mux)</li>
-			</ul>
-		</ul></ul>
+		</ul>
 	</section>
 	</section>
-		<section class="slide">
+	<section class="slide">
 		<h2 class="shout">Q and A</h2>
 	</section>
 	<!--
@@ -352,4 +484,5 @@ import (<br />
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
+
 </html>
