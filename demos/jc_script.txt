@@ -1,6 +1,5 @@
 Prep
-=====
-
+====
 1) Change GOPATH to Documents\go2
 2) Change PATH to include Documents\go2\bin (before the default go\bin)
 2) Clear Documents\go2.
@@ -8,7 +7,7 @@ Prep
 Go get and Vendoring demo
 =========================
 1) Get Gorilla mux:
-   go get -u github.com/gorilla/mux
+   go get github.com/gorilla/mux
 2) Go to Gorilla mux path and show how it is a local repository pointing back to origin/master.
    cd %GOPATH%\src\github.com\gorilla\mux
    git remote -v 
@@ -16,7 +15,7 @@ Go get and Vendoring demo
    mkdir %GOPATH%\src\gorillaweb
    cd %GOPATH%\src\gorillaweb
 4) Copy app code.
-   cp go-getting-started-slides/demos/gorillaweb.go .
+   cp $HOME\documents\GitHub\go-getting-started-slides\demos\gorillaweb.go .
    go build
 5) Run demo and navigate to localhost:8000
    gorillaweb
@@ -25,7 +24,7 @@ Vendoring demo
 ==============
 1) Get godep
    go get github.com/tools/godep
-2) Show where it is being installed in the tools.
+2) Show where it is being installed in the tools and bin.
 3) Run the godep save command:
    cd %GOPATH%\src\gorillaweb
    godep save
@@ -35,6 +34,25 @@ Vendoring demo
    rm -rf gorilla
 6) Add another route for goodnight to the Gorilla (as in gorilla2.go)
 6) Rebuild the app, start again, and browse to the new route.
+
+Forking demo
+============
+1) Get xo
+   go get github.com/knq/xo
+2) While that is happening clone the fork.
+   cd %GOPATH%\src\github.com
+   git clone https://github.com/turnkey-commerce/xo.git turnkey-commerce\xo
+3) Go to the github\knq\xo folder and add remote to fork:
+   git remote add fork https://github.com/turnkey-commerce/xo.git
+   git fetch fork
+4) Checkout the remote: 
+   git checkout -b test fork/test
+
+vscode demo
+===========
+   
+
+   
 
 
 
