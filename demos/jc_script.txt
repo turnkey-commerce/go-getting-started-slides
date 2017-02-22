@@ -50,7 +50,15 @@ Forking demo
 
 vscode demo
 ===========
-   
+1) Install Delve
+   go get github.com/derekparker/delve/cmd/dlv
+2) Put breakpoint in sqlite.go:130 and sqlite.go:138 and launch the debugger.
+   - Step into  models.SqAutoIncrements.
+   - Step over and increment the rows over the tables.
+3) Show Git Integration:
+   - Make a minor change and commit.
+4) Show Extensions and the Go lukhoban.
+
 
    
 
