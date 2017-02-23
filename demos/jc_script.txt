@@ -15,7 +15,7 @@ Go get and Vendoring demo
    mkdir %GOPATH%\src\gorillaweb
    cd %GOPATH%\src\gorillaweb
 4) Copy app code.
-   cp $HOME\documents\GitHub\go-getting-started-slides\demos\gorillaweb.go .
+   cp %HOME%\documents\GitHub\go-getting-started-slides\demos\gorillaweb.go .
    go build
 5) Run demo and navigate to localhost:8000
    gorillaweb
@@ -48,17 +48,28 @@ Forking demo
 4) Checkout the remote: 
    git checkout -b test fork/test
 
-vscode demo
+VS Code demo
 ===========
 1) Install Delve
    go get github.com/derekparker/delve/cmd/dlv
-2) Put breakpoint in sqlite.go:130 and sqlite.go:138 and launch the debugger.
+2) Launch VS Code from knq\xo.
+   code .
+2) Put breakpoint in loaders\sqlite.go:130 and sqlite.go:138 and launch the debugger.
    - Step into  models.SqAutoIncrements.
    - Step over and increment the rows over the tables.
 3) Show Git Integration:
-   - Make a minor change and commit.
+   - Make a minor change and commit (Add continue statement after manuaPK = false).
 4) Show Extensions and the Go lukhoban.
 
+Exercism demo
+=============
+1) Make sure the configuration is to the proper directory.
+   exercism configure --dir=C:\Users\James\Documents\go2\exercism
+2) Pull the leap year test.
+   exercism fetch go leap
+3) Show how the tests work and make a run.
+   code .
+   go test
 
    
 

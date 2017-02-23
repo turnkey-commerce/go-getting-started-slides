@@ -16,6 +16,8 @@
 		
 		code {
 			font-size: 14pt;
+			line-height: 10px;
+			margin: 10px;
 		}
 		
 		h3 {
@@ -376,7 +378,10 @@ import (<br />
 				<li>Go get the package as normal</li>
 				<li>Fork package as usual on Github</li>
 				<li>At "go get" code location set fork as remote</li>
-				<code>git remote add fork https://github.com/<i>your-username</i>/repo.git</code>
+				<code>
+git remote add fork https://github.com/<i>your-username</i>/repo.git
+<br>&nbsp;git fetch fork
+<br>&nbsp;git checkout -b test fork/test</code>
 				<li>Push commits back to fork</li>
 				<li>Issue pull request from fork</li>
 			</ol>
@@ -474,6 +479,7 @@ import (<br />
 	</section>
 	<section class="slide">
 		<h2 class="shout">Q and A</h2>
+		<h3>URL for Slides: https://goo.gl/JuyhtC</h3>
 	</section>
 	<!--
 		To hide progress bar from entire presentation
